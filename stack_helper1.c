@@ -1,6 +1,20 @@
 #include "monty.h"
 
 /**
+ * fswap - swaps top two elements
+ *
+ * @stack: stack
+ */
+void fswap(stack_t **stack)
+{
+	int tmp;
+
+	tmp = (*stack)->n;
+	(*stack)->n = (*stack)->next->n;
+	(*stack)->next->n = tmp;
+}
+
+/**
  * print_stack_str - prints a stack in string form
  *
  * @stack: stack.
