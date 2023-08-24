@@ -27,3 +27,15 @@ void fqueue(stack_t **stack, unsigned int number)
 
 	operation.mode = 1;
 }
+
+/**
+ * nop - does nothing
+ *
+ * @stack: a stack.
+ * @number: line number.
+ */
+void nop(stack_t **stack, unsigned int number)
+{
+	UNUSED(stack);
+	UNUSED(number);
+}
