@@ -57,16 +57,6 @@ int is_empty(stack_t *stack)
 	return (stack == NULL);
 }
 
-/**
- * get_top - get the element at the top of stack.
- *
- * @stack: stack.
- * Return: the top element.
- */
-int get_top(stack_t *stack)
-{
-	return (stack->n);
-}
 
 /**
  * enqueue - Add element at the end of list.

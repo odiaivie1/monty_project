@@ -6,11 +6,9 @@
  * @stack: a stack.
  * @number: line number.
  */
-void fstack(stack_t **stack, unsigned int number)
+void fstack(__attribute__((unused)) stack_t **stack,
+		__attribute__((unused)) unsigned int number)
 {
-	UNUSED(stack);
-	UNUSED(number);
-
 	operation.mode = 0;
 }
 
@@ -20,11 +18,9 @@ void fstack(stack_t **stack, unsigned int number)
  * @stack: a stack.
  * @number: line number.
  */
-void fqueue(stack_t **stack, unsigned int number)
+void fqueue(__attribute__((unused)) stack_t **stack,
+		__attribute__((unused)) unsigned int number)
 {
-	UNUSED(stack);
-	UNUSED(number);
-
 	operation.mode = 1;
 }
 
@@ -34,8 +30,18 @@ void fqueue(stack_t **stack, unsigned int number)
  * @stack: a stack.
  * @number: line number.
  */
-void nop(stack_t **stack, unsigned int number)
+void nop(__attribute__((unused)) stack_t **stack,
+		__attribute__((unused)) unsigned int number)
 {
-	UNUSED(stack);
-	UNUSED(number);
+}
+
+/**
+ * get_top - get the element at the top of stack.
+ *
+ * @stack: stack.
+ * Return: the top element.
+ */
+int get_top(stack_t *stack)
+{
+	return (stack->n);
 }
