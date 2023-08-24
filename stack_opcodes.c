@@ -54,3 +54,16 @@ void rotr(stack_t **stack, unsigned int number)
 		fpush(stack, lpop(stack));
 }
 
+/**
+ * rotl - rotates the stack to the top
+ *
+ * @stack: a stack.
+ * @number: line number.
+ */
+void rotl(stack_t **stack, unsigned int number)
+{
+	UNUSED(number);
+
+	if (!is_empty(*stack))
+		enqueue(stack, fpop(stack));
+}
