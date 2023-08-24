@@ -30,3 +30,35 @@ void print_stack(const stack_t *stack)
 		stack = stack->next;
 	}
 }
+
+/**
+ * free_stack - frees stack.
+ *
+ * @stack: stack.
+ */
+void free_stack(stack_t *stack)
+{
+	stack_t *tmp;
+
+	while (stack != NULL)
+	{
+		tmp = stack;
+		stack = stack->next;
+		free(tmp);
+	}
+}
+
+/**
+ * stack_len - length of stack.
+ *
+ * @stack: stack.
+ * Return: length of stack.
+ */
+size_t stack_len(const stack_t *stack)
+{
+	size_t len;
+
+	for (len = 0; stack != NULL; stack = stack->next)
+		++len;
+	return (len);
+}
