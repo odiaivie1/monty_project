@@ -14,6 +14,7 @@ void execute_opcode(stack_t **stack, unsigned int line_number)
 		{"add", add},
 		{"pop", pop},
 		{"pint", pint},
+		{"nop", nop},
 		{"swap", swap},
 		{"sub", sub},
 		{"div", fdiv},
