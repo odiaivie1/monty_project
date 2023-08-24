@@ -67,3 +67,16 @@ void rotl(stack_t **stack, unsigned int number)
 	if (!is_empty(*stack))
 		enqueue(stack, fpop(stack));
 }
+
+/**
+ * swap - swaps top two element.
+ *
+ * @stack: a stack.
+ * @number: line number.
+ */
+void swap(stack_t **stack, unsigned int number)
+{
+	if (stack_len(*stack) < 2)
+		err_exit(*stack, "L%d: can't swap, stack too short\n", number);
+	fswap(stack);
+}
