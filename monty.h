@@ -64,3 +64,45 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/* Instruction functions */
+void add(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void sub(stack_t **stack, unsigned int line_number);
+void mul(stack_t **stack, unsigned int line_number);
+void fdiv(stack_t **stack, unsigned int line_number);
+void mod(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
+void rotr(stack_t **stack, unsigned int line_number);
+void fstack(stack_t **stack, unsigned int line_number);
+void fqueue(stack_t **stack, unsigned int line_number);
+
+/* Stacks and Queues Operations*/
+stack_t *fpush(stack_t **stack, int num);
+void print_stack(const stack_t *stack);
+void free_stack(stack_t *stack);
+int is_empty(stack_t *stack);
+int fpop(stack_t **stack);
+size_t stack_len(const stack_t *stack);
+stack_t *enqueue(stack_t **stack, int num);
+void fswap(stack_t **stack);
+int get_top(stack_t *stack);
+void print_stack_str(const stack_t *stack);
+int lpop(stack_t **stack);
+
+/* Helper functions */
+char **strtow(char *str);
+size_t strchr_no(const char *s, int c);
+void free_tok(void);
+int isnum(char *s);
+void err_exit(stack_t *stack, const char *msg, ...);
+void execute_opcode(stack_t **stack, unsigned int line_number);
+
+#endif /* monty.h */
