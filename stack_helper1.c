@@ -16,3 +16,17 @@ void print_stack_str(const stack_t *stack)
 	}
 	putchar('\n');
 }
+
+/**
+ * print_stack - print stack
+ *
+ * @stack: stack
+ */
+void print_stack(const stack_t *stack)
+{
+	while (stack != NULL)
+	{
+		printf("%d\n", stack->n);
+		stack = stack->next;
+	}
+}
