@@ -26,3 +26,16 @@ void push(stack_t **stack, unsigned int number)
 			err_exit(*stack, "Error: malloc failed\n");
 	}
 }
+
+/**
+ * pop - pops from stack.
+ *
+ * @stack: a stack.
+ * @number: line number.
+ */
+void pop(stack_t **stack, unsigned int number)
+{
+	if (is_empty(*stack))
+		err_exit(*stack, "L%d: can't pop an empty stack\n", number);
+	fpop(stack);
+}
