@@ -24,7 +24,7 @@
  * @mode: mode of operation; queue or stack.
  * @line_number: current line number.
  */
-tydef struct op_s
+typedef struct op_s
 {
 	FILE *fp;
 	char **tokens;
