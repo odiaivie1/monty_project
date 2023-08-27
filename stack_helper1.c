@@ -23,7 +23,7 @@ void print_stack_str(const stack_t *stack)
 {
 	while (stack != NULL)
 	{
-		if (stack->n == 0 || stack->n > 127)
+		if (stack->n <= 0 || stack->n > 127)
 			break;
 		putchar(stack->n);
 		stack = stack->next;

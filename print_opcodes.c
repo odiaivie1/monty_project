@@ -14,7 +14,7 @@ void pchar(stack_t **stack, unsigned int number)
 		err_exit(*stack, "L%d: can't pchar, stack empty\n", number);
 
 	top = get_top(*stack);
-	if (top > 127)
+	if (top > 127 || top < 0)
 		err_exit(*stack, "L%d: can't pchar, value out of range\n", number);
 	printf("%c\n", top);
 }
