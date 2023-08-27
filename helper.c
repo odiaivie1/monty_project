@@ -22,6 +22,7 @@ int isnum(char *s)
 {
 	int i = 0;
 
+	i += strspn(s, "+-");
 	while (s[i] != '\0')
 	{
 		if (isdigit(s[i]) == 0)
